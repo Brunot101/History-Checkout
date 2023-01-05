@@ -24,6 +24,7 @@
     padding: 50px;
     background-color: rgb(12, 12, 210);
     color: rgb(255, 255, 255);
+    font-family:'garamond'
     
     
     
@@ -49,6 +50,7 @@
     grid-area: menu;
     background-color: rgb(12, 12, 210);
     margin-top: 15px;
+   
     
     
 }
@@ -77,16 +79,30 @@
 
 .loginIcons i{
     position:absolute;
+    left: 15px;
+    
     
    
 
 }
 
+#email,#password, #submitlogin{
+    position: relative;
+    left: 10px;
+    border-radius: 10px;
+    outline: unset;
+    border: 1px solid rgb(10, 10, 10);
+}
+
 #cpf{
     height: 100px;
     width: 400px;
-    box-shadow: 5px 5px 5px 5px rgb(194, 194, 199)
+    box-shadow: 5px 5px 5px 5px rgb(194, 194, 199);
+    outline: unset;
+    border: 1px solid rgb(10, 10, 10);
+    
 }
+
 
 #form1{
     padding-top: 30px;
@@ -105,6 +121,7 @@ input#botaoCpf {
     height: 20vh;
     text-align: center;
     
+    
 }
 h1{
     color: rgb(248, 248, 248);
@@ -115,8 +132,9 @@ h1{
 }
 #labelcod{
     position: relative;
-    left: 150px;
+    left: 260px;
     bottom: 60px;
+    text-align: center;
 }
 
 #submitCpf{

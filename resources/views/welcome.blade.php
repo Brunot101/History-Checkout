@@ -19,12 +19,14 @@
     @endif
     <form action = "/login" method = "post">
     @csrf
-    <i class="bi bi-person-fill"></i>
-    <input  type="email" name="email" placeholder= "Email">         
+    
+    <input  type="email" name="email" placeholder= "Email" id="email">
+    <i class="bi bi-person-fill"></i>         
     <br>
     <br>
+    
+    <input type="password" name="password"  placeholder="Senha" id="password">
     <i class="bi bi-lock-fill"></i>
-    <input type="password" name="password"  placeholder="Senha">
     <br>
     <br>
     <button type="submit" id="submitlogin">Enviar</button>

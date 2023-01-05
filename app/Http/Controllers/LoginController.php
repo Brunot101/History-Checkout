@@ -174,15 +174,7 @@ class LoginController extends Controller
     public function status(Request $request, Exception $exception, Auth $auth){
 
       
-    $this->validate($request,[
-        'cpf' => ['required'],
-        
-
-    ],[
-        'cpf.required' => 'Digite um cpf valido',
-        
-    ]
-);
+    
     $historico = Historico::where('cpf', $request->cpf)->first();
     
     if($historico == null){

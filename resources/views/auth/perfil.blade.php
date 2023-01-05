@@ -47,7 +47,7 @@
                   </div>
                   <div class="form-group col-md-6">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" value= "{{auth()->user()->email}}" name="email" >
+                    <input type="email" class="form-control"  value= "{{auth()->user()->email}}" name="email" >
                   </div>
                   
                 </div>
