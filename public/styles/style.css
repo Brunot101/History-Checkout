@@ -1,0 +1,185 @@
+.grid-container{
+    
+    display: grid;
+    
+    grid-template-areas: 
+        'topo topo topo topo topo topo'
+        'topo2 topo2 topo2 topo2 topo2 topo2'
+        'menu conteudo conteudo conteudo conteudo conteudo'
+        'menu conteudo conteudo conteudo conteudo conteudo'
+        'footer footer footer footer footer footer';
+
+   
+        
+    
+    /* background-color: rgb(233, 233, 233); */
+    
+   
+}
+
+
+#topo{
+    text-align: center;
+    grid-area: topo;
+    padding: 50px;
+    background-color: rgb(12, 12, 210);
+    color: rgb(255, 255, 255);
+    
+    
+    
+}
+#topo2{
+    
+    grid-area: topo2;
+    padding: 10px;
+    
+    background-color: rgb(255, 0, 0);
+    box-shadow: 5px 5px 5px 5px rgb(189, 188, 188);
+    
+    
+
+    
+}
+#menu{
+    padding-top: 20px;
+    width: 230px;
+    height: 130vh;
+    padding: 5rem, 1rem;
+    text-align:left;
+    grid-area: menu;
+    background-color: rgb(12, 12, 210);
+    margin-top: 15px;
+    
+    
+}
+
+#conteudo{
+    padding: 50px;
+    
+    grid-area: conteudo;
+    
+}
+#footer{
+    grid-area: footer;
+    padding: 30px;
+    background-color: rgb(242, 242, 242);
+}
+
+
+
+.loginIcons input{
+    padding-left: 30px;
+    border-radius: 5px;
+   
+    
+   
+}
+
+.loginIcons i{
+    position:absolute;
+    
+   
+
+}
+
+#cpf{
+    height: 100px;
+    width: 400px;
+    box-shadow: 5px 5px 5px 5px rgb(194, 194, 199)
+}
+
+#form1{
+    padding-top: 30px;
+    padding: 10px;
+    
+}
+
+input#botaoCpf {
+    position:relative;
+    top: 80px;
+}
+
+.cpfForm{
+    padding-top: 50px;
+    width: 145vh;
+    height: 20vh;
+    text-align: center;
+    
+}
+h1{
+    color: rgb(248, 248, 248);
+}
+
+#cpf{
+    border-radius: 5px;
+}
+#labelcod{
+    position: relative;
+    left: 150px;
+    bottom: 60px;
+}
+
+#submitCpf{
+    position: relative;
+    top: 80px;
+    right: 60px;
+}
+ a{
+    color: rgb(187, 187, 187) !important;
+}
+
+#editbutton{
+    position: relative;
+    left: 13px;
+}
+#imagemperfil{
+
+    max-width: 300px;
+    max-height: 300px;
+    height: auto;
+    width: auto;
+    border-radius: 50%;
+}
+#perfil{
+    padding: 10px;
+}
+
+.head{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.progresso .etapas{
+    display: table;
+    table-layout: fixed;
+    text-align: center;
+    width: 100%;
+    
+}
+
+.progresso .etapas>li{
+    text-align: center;
+    position: relative;
+    display: table-cell;
+    padding: 30px;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 1px; 
+    
+}
+/* .progresso .etapas .pasta-encontrada{
+    background-color: rgb(8, 224, 8);
+}
+.progresso .etapas .solicitado{
+    background-color: rgb(8, 224, 8);
+}
+
+.progresso .etapas .pendencias-verificadas{
+    background-color: red;
+} */
+
+#botao-cadastrar{
+    position: relative;
+    left: 15px;
+    
+}
