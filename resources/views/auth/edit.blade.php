@@ -1,26 +1,26 @@
 
 
 <!-- Modal content -->
-<div class="modal " id="edit-{{$historico->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="edit-{{$historico->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title" id="exampleModalLabel">Informações</h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
+        
+        <h3 class="modal-title" id="tituloEdit">Informações</h3>
+        
+        <div class="modal-body" >
           
-          <form action="{{route('auth.editar_historico',$historico->id)}}" method="POST">
+          <form action="{{route('auth.editar_historico',$historico->id)}}" method="POST" id="modalEdit">
+            
             @csrf
             @method('PUT')
             <div class="form-row">
               <div class="form-group col-md-6">
+                <br>
                 <label for="inputNome">Nome</label>
                 <input type="text" class="form-control" id="inputNome" placeholder="Nome do aluno" value="{{$historico->aluno}}" name="aluno"  >
               </div>
               <div class="form-group col-md-6">
+                <br>
                 <label for="nascimento">Data de nascimento</label>
                 <input type="date" class="form-control" id="nascimento" value="{{$historico->nascimento}}" name="nascimento">
               </div>

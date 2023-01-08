@@ -124,10 +124,13 @@ h1{
 #submitCpf{
     position: relative;
     top: 80px;
-    right: 60px;
+    right: 70px;
 }
  a{
     color: rgb(187, 187, 187) !important;
+}
+.cpfs{
+    text-align: center;
 }
 
 #editbutton{

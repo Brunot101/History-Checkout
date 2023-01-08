@@ -63,18 +63,18 @@
                     <td><?php echo e($historico->pai); ?></td>
                     <td><?php echo e($historico->status); ?></td>
                     <td><!-- Button trigger modal -->
-                      <form action="<?php echo e(route('historico.deletar',$historico->id)); ?>" method="post">
-                        <?php echo method_field('DELETE'); ?>
-                        <?php echo csrf_field(); ?>
+                      <form >
+                       
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-<?php echo e($historico->id); ?>"  >
                           <i class="bi bi-pencil"></i>
                         </button>
-                        <button type="submit" class="btn btn-primary"  >
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#delete-<?php echo e($historico->id); ?>"  >
                           <i class="bi bi-x-square"></i>
                         </button>
 
                       </form>
                       <?php echo $__env->make('auth.edit', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                      <?php echo $__env->make('auth.delete', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                       
                     </td>
                     
@@ -85,8 +85,12 @@
                   
                 </tbody>
               </table>
+
+              
                
         </div>
+
+        
         <body>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

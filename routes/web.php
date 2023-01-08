@@ -48,5 +48,6 @@ Route::group(['middleware'=>['auth']],function(){
     Route::get('/login/cadastrar', [LoginController::class,'cadastrar'])->name('auth.cadastrar_historico');
     Route::get('/login/perfil', [LoginController::class,'perfil']);
     Route::get('/login/solicitados/edit/{id}', [LoginController::class,'modal_view'])->name('auth.modal_view');
+    Route::get('/login/solicitados/delete/{id}',[LoginController::class, 'modal_delete'])->name('auth.modal_delete');
     
 });

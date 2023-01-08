@@ -24,7 +24,7 @@
     padding: 50px;
     background-color: rgb(12, 12, 210);
     color: rgb(255, 255, 255);
-    font-family:'garamond'
+    
     
     
     
@@ -93,6 +93,12 @@
     outline: unset;
     border: 1px solid rgb(10, 10, 10);
 }
+#submitlogin{
+    width: 100px;
+}
+.head-content{
+    margin-bottom: 40px;
+}
 
 #cpf{
     height: 100px;
@@ -110,10 +116,7 @@
     
 }
 
-input#botaoCpf {
-    position:relative;
-    top: 80px;
-}
+
 
 .cpfForm{
     padding-top: 50px;
@@ -140,11 +143,31 @@ h1{
 #submitCpf{
     position: relative;
     top: 80px;
-    right: 60px;
+    right: 70px;
 }
  a{
-    color: rgb(187, 187, 187) !important;
+    color: rgb(255, 255, 255) !important;
 }
+
+.modal-content{
+    opacity: 1 !important;
+    transition: 1s;
+
+   
+}
+a:hover{
+    background-color: #1790ed !important;
+    transition: 0.5s;
+}
+#form_delete{
+    text-align: right;
+}
+#tituloEdit{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
 
 #editbutton{
     position: relative;
@@ -200,4 +223,8 @@ h1{
     position: relative;
     left: 15px;
     
+}
+
+#submitlogin:hover{
+    background-color: #1790ed;;
 }

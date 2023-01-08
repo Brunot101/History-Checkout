@@ -30,7 +30,7 @@
     <i class="bi bi-lock-fill"></i>
     <br>
     <br>
-    <button type="submit" id="submitlogin">Enviar</button>
+    <button type="submit" class="btn btn-outline-primary" id="submitlogin">Login</button>
     </form>
                                  
 </div>
@@ -50,11 +50,14 @@
             <div class="cpfForm">
                 <form action="<?php echo e(route('status')); ?>" method="POST">
                 <label for="codigo" id="labelcod">Digite o CPF do aluno</label>
-                <input type="text" id="cpf" placeholder="Ex: 123.456.789-00" name="cpf">
+                <input type="text" id="cpf" placeholder="Ex: 123.456.789-00" name="cpf" >
                 
                     <?php echo csrf_field(); ?>
                     <?php echo method_field('POST'); ?>
-                    <button type="submit" id="submitCpf" >Enviar</button>
+                    
+                    <button type="submit" class="btn btn-primary" id="submitCpf" >Enviar</button>
+
+                   
                 </form>
                 
             </div>

@@ -63,18 +63,18 @@
                     <td>{{$historico->pai}}</td>
                     <td>{{$historico->status}}</td>
                     <td><!-- Button trigger modal -->
-                      <form action="{{route('historico.deletar',$historico->id)}}" method="post">
-                        @method('DELETE')
-                        @csrf
+                      <form >
+                       
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-{{$historico->id}}"  >
                           <i class="bi bi-pencil"></i>
                         </button>
-                        <button type="submit" class="btn btn-primary"  >
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#delete-{{$historico->id}}"  >
                           <i class="bi bi-x-square"></i>
                         </button>
 
                       </form>
                       @include('auth.edit')
+                      @include('auth.delete')
                       
                     </td>
                     
@@ -85,8 +85,12 @@
                   
                 </tbody>
               </table>
+
+              
                
         </div>
+
+        
         <body>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

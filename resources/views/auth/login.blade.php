@@ -47,7 +47,7 @@
     
         @csrf
         @method('POST')
-        <button type="submit" id="submitCpf" >Enviar</button>
+        <button type="submit" class="btn btn-primary" id="submitCpf" >Enviar</button>
     </form>
     
 </div>
