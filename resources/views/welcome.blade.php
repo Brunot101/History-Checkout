@@ -4,7 +4,7 @@
 <div class="loginIcons">
     
     @if ($errors->any())
-    <div class="alert alert-danger">
+    <div class="alert alert-danger" id="dangerLogin">
         <ul>
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
@@ -13,7 +13,7 @@
     </div>
     @endif
     @if(session('invalido'))
-    <div class="alert alert-danger">
+    <div class="alert alert-danger" id="invalidLogin">
         {{session('invalido')}}
     </div>
     @endif

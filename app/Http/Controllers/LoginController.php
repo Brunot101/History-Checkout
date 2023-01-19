@@ -87,7 +87,7 @@ class LoginController extends Controller
         $table->status = $request->status;
         $table->save();
 
-        return redirect()->route('auth.cadastrar_historico');
+        return redirect()->route('auth.cadastrar_historico')->with('register success','Histórico cadastrado com sucesso!');
         
 
        
@@ -168,7 +168,7 @@ class LoginController extends Controller
 
         $historico = Historico::findOrFail($id);
         $historico->delete();
-        return redirect('/login/solicitados');
+        return redirect('/login/solicitados')->with('delete success','Historico deletado com succeso!');
     }
 
     public function status(Request $request, Exception $exception, Auth $auth){
@@ -179,7 +179,7 @@ class LoginController extends Controller
     
     if($historico == null){
        
-        return back()->with('msg','Historico não encontrado');
+        return back()->with('msg','Histórico não encontrado');
         
     }
     else if(Auth::check()){

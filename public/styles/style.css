@@ -85,6 +85,35 @@
    
 
 }
+#dangerLogin, #invalidLogin{
+    margin: 15px;
+}
+.search i{
+    position: absolute;
+    padding-left: 5px;
+    padding-top: 4px;
+    
+}
+#inputSearch{
+    float: left;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid;
+    outline: unset;
+    height: 35px;
+    
+    background-color: transparent;
+}
+
+.search input[type=text]{
+    padding-left: 20px;
+   
+}
+#searchButton{
+    float:left;
+   
+}
+
 
 #email,#password, #submitlogin{
     position: relative;

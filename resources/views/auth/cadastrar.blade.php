@@ -30,6 +30,7 @@
         <div id="conteudo">
           <div class="head-cadastrar" style="text-align: center;padding-bottom: 50px;" >
             <h2>Cadastrar Histórico</h2>
+            @include('auth.includes.messages')
           </div>
             <form action="{{route('auth.cadastrar')}}" method="post">
               @csrf

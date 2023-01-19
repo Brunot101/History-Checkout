@@ -30,6 +30,7 @@
         <div id="conteudo">
           <div class="head-cadastrar" style="text-align: center;padding-bottom: 50px;" >
             <h2>Cadastrar Histórico</h2>
+            <?php echo $__env->make('auth.includes.messages', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
           </div>
             <form action="<?php echo e(route('auth.cadastrar')); ?>" method="post">
               <?php echo csrf_field(); ?>

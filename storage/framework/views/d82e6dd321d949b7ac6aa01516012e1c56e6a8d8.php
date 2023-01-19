@@ -40,12 +40,23 @@
           <div class="head-solicitados" style="text-align: center; padding-bottom: 30px;">
 
             <h2>Históricos Solicitados</h2>
+            
+            <?php echo $__env->make('auth.includes.messages', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
           </div>
+            <div class="search">
+              <i class="bi bi-search"></i>
+              <input type="text" placeholder="Pesquisar" id="inputSearch">
+              <button type="input" class="btn btn-primary" id="searchButton"> Pesquisar</button>
+            
+              
+            </div>
             <table class="table table-hover" id="table1">
+                
                 <thead>
                   <tr>
-                    <th scope="col"></th>
-                    
+                    <th scope="col">
+                      
+                    </th>
                     <th scope="col">Nome</th>
                     <th scope="col">CPF</th>
                     <th scope="col">Pai</th>
