@@ -33,6 +33,12 @@
                             <i class="bi bi-check2"></i>
                         </span>
                     </li>
+                    <li class="historico-entregue" data-toggle="tab"  >
+                        <span class="round-tab" <?php echo e($historico->status == 'Historico entregue' ? 'style=background-color:rgb(8,224,8);' : ''); ?>>
+                            <i class="bi bi-envelope"></i>
+                        </span>
+                    </li>
+                    
                     
                 </ul>
             </div>
