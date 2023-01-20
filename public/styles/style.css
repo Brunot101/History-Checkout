@@ -91,7 +91,7 @@
 .search i{
     position: absolute;
     padding-left: 5px;
-    padding-top: 4px;
+    padding-top: 8px;
     
 }
 #inputSearch{
@@ -106,7 +106,7 @@
 }
 
 .search input[type=text]{
-    padding-left: 20px;
+    padding-left: 25px;
    
 }
 #searchButton{
@@ -273,7 +273,7 @@ a:hover{
     height: 2px;
     background: #c1c1c1;
     position: absolute;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     left: 0;
     

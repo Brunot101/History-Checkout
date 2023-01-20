@@ -1,9 +1,10 @@
 @extends('layouts.main')
 @section('title', 'Home')
 @section('menu')
+
 <div class="loginIcons">
     
-    @if ($errors->any())
+    @if($errors->any())
     <div class="alert alert-danger" id="dangerLogin">
         <ul>
             @foreach ($errors->all() as $error)
