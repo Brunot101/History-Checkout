@@ -76,6 +76,10 @@
                         <input type="radio"  id="pronto" value="Historico pronto" name="status" {{$historico->status == 'Historico pronto' ? 'checked' :''}} >
                         <label for="Historico pronto">Histórico pronto</label>
                       </div>
+                      <div>
+                            <input type="radio"  id="entregue" value="Historico entregue" name="status" {{$historico->status == 'Historico entregue' ? 'checked' :''}} >
+                            <label for="Historico entregue">Histórico entregue</label>
+                      </div>
                       
                     </div>
                   </fieldset>
