@@ -1,6 +1,7 @@
 
 <?php $__env->startSection('title', 'Home'); ?>
 <?php $__env->startSection('menu'); ?>
+
 <div class="loginIcons">
     
     <?php if($errors->any()): ?>

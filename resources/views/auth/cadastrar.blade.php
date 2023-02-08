@@ -104,8 +104,8 @@
                 
                           </div>
                           <div>
-                            <input type="radio"  id="entregue" value="Entregue" name="status" >
-                            <label for="Historico pronto">Histórico entregue</label>
+                            <input type="radio"  id="entregue" value="Historico entregue" name="status" >
+                            <label for="Historico entregue">Histórico entregue</label>
                           </div>
                           
                         </div>

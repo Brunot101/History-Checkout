@@ -99,8 +99,13 @@
                           </div>
                           <div>
 
-                            <input type="radio"  id="confeccao" value="Em confecção" name="status" >
+                            <input type="radio"  id="pronto" value="Em confecção" name="status" >
                             <label for="Historico pronto">Histórico pronto</label>
+                
+                          </div>
+                          <div>
+                            <input type="radio"  id="entregue" value="Historico entregue" name="status" >
+                            <label for="Historico entregue">Histórico entregue</label>
                           </div>
                           
                         </div>
