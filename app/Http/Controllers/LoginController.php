@@ -133,6 +133,11 @@ class LoginController extends Controller
         $historicos = Historico::all();
         return view('auth.solicitados',['historicos'=>$historicos]);
     }
+    public function queryHistory(Request $request){
+
+        $historicos = Historico::where('aluno','LIKE', '%' .$request->aluno.'%')->get();
+        return view('auth.solicitados',['historicos'=>$historicos]);
+    }
 
     public function cadastrar(){
 

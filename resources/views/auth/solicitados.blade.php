@@ -44,12 +44,15 @@
             @include('auth.includes.messages')
           </div>
             <div class="search">
+            <form action="{{route('queryHistory')}}" method="post">
+            @csrf
               <i class="bi bi-search"></i>
-              <input type="text" placeholder="Pesquisar" id="inputSearch">
-              <button type="input" class="btn btn-primary" id="searchButton"> Pesquisar</button>
+              <input type="text" placeholder="Pesquisar" id="inputSearch" name="aluno">
+              <button type="submit" class="btn btn-primary" id="searchButton" > Pesquisar</button>
             
               
             </div>
+            </form>
             <table class="table table-hover" id="table1">
                 
                 <thead>

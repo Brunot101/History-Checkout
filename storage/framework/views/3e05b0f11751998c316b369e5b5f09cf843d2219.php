@@ -44,12 +44,15 @@
             <?php echo $__env->make('auth.includes.messages', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
           </div>
             <div class="search">
+            <form action="<?php echo e(route('queryHistory')); ?>" method="post">
+            <?php echo csrf_field(); ?>
               <i class="bi bi-search"></i>
-              <input type="text" placeholder="Pesquisar" id="inputSearch">
-              <button type="input" class="btn btn-primary" id="searchButton"> Pesquisar</button>
+              <input type="text" placeholder="Pesquisar" id="inputSearch" name="aluno">
+              <button type="submit" class="btn btn-primary" id="searchButton" > Pesquisar</button>
             
               
             </div>
+            </form>
             <table class="table table-hover" id="table1">
                 
                 <thead>

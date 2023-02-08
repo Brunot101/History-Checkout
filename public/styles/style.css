@@ -94,7 +94,8 @@
     padding-top: 8px;
     
 }
-#inputSearch{
+
+/* #inputSearch{
     float: left;
     width: 300px;
     border-radius: 10px;
@@ -103,15 +104,46 @@
     height: 35px;
     
     background-color: transparent;
+} */
+.search{
+
+  
+  border-radius:10px;
+  width:300px;
+  height:32px;
+}
+#inputSearch{
+    float:left;
+    background-color:transparent;
+    
+    font-size:15px;
+    border:none;
+    background-color: #f9f5f5;
+    /* border-radius: 10px 0 0 10px; */
+    height:32px;
+    width:191px;
+    outline: unset
+}
+#searchButton{
+    border:none;
+    float:left;
+    height:32px;
+    border-radius:0 7px 7px 0;
+    width:105px;
+    font-weight:bold;
+    
 }
 
 .search input[type=text]{
     padding-left: 25px;
+    padding-top: 5px;
    
 }
 #searchButton{
     float:left;
-   
+    
+    
+    
 }
 
 
@@ -306,4 +338,8 @@ span.round-tab{
     position: relative;
     right: 90px;
     
+}
+
+#table1{
+    margin-top: 10px;
 }

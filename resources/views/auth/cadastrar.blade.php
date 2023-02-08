@@ -54,7 +54,7 @@
                   </div>
                   <div class="form-group col-md-6">
                     <label for="cpf">CPF</label>
-                    <input type="text" class="form-control" id="cpfaluno"  placeholder="123.456.789-00" name="cpf">
+                    <input type="text" class="form-control" id="cpfaluno"  placeholder="123.456.789-00" name="cpf" maxlength="11">
                   </div>
                   
                 </div>

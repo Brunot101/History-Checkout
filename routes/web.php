@@ -29,6 +29,8 @@ Route::post('/login',[LoginController::class,'auth']);
 
 Route::get('/cadastrar',[LoginController::class, 'cadastrar1']);
 Route::post('/status',[LoginController::class, 'status'])->name('status');
+Route::post('/solicitados',[LoginController::class, 'queryHistory'])->name('queryHistory');
+
 
 Route::post('/cadastrar',[LoginController::class, 'criar'])->name('cadastrar.criar');
 Route::put('/login/perfil/atualizar',[LoginController::class, 'atualizar'])->name('auth.atualizar');
