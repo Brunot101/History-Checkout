@@ -48,7 +48,7 @@
             @csrf
               <i class="bi bi-search"></i>
               <input type="text" placeholder="Pesquisar" id="inputSearch" name="aluno">
-              <button type="submit" class="btn btn-primary" id="searchButton" > Pesquisar</button>
+              <button  class="btn btn-primary" id="searchButton" > Pesquisar</button>
             
               
             </div>
