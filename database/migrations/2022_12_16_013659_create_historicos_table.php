@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('mae')->nullable();
             $table->string('observacoes')->nullable();
             $table->string('status');
+            
         });
     }
 

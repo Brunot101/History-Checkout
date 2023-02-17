@@ -46,6 +46,7 @@
             <div class="search">
             <form action="<?php echo e(route('queryHistory')); ?>" method="post">
             <?php echo csrf_field(); ?>
+            
               <i class="bi bi-search"></i>
               <input type="text" placeholder="Pesquisar" id="inputSearch" name="aluno">
               <button  class="btn btn-primary" id="searchButton" > Pesquisar</button>
@@ -65,6 +66,7 @@
                     <th scope="col">Pai</th>
                     <th scope="col">Status</th>
                     <th scope="col"> Editar</th>
+                    <th scope="col"> Histórico em PDF</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -91,7 +93,19 @@
                       <?php echo $__env->make('auth.delete', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                       
                     </td>
+                    <td>
                     
+                      <form action="<?php echo e(route('upload_historico',$historico->id)); ?>" method = "POST" enctype=”multipart/form-data” >
+                        <?php echo csrf_field(); ?>
+                        <?php echo method_field('PUT'); ?>
+                        <div id="pdfForm">
+                          <input class="form-control" type="file" id="formFile" name="pdf">
+                          <button id="pdfButton" class = "btn btn-primary">Salvar</button>
+                        </div>
+                        
+                      </form>
+                    
+                    </td>
                       
                      
                   </tr>

@@ -34,6 +34,7 @@ Route::post('/solicitados',[LoginController::class, 'queryHistory'])->name('quer
 
 Route::post('/cadastrar',[LoginController::class, 'criar'])->name('cadastrar.criar');
 Route::put('/login/perfil/atualizar',[LoginController::class, 'atualizar'])->name('auth.atualizar');
+Route::put('/login/solicitados/{id}',[LoginController::class, 'upload_historico'])->name('upload_historico');
 Route::put('/login/solicitados/edit/{id}',[LoginController::class, 'editar_historico'])->name('auth.editar_historico');
 Route::post('/login/cadastrar',[LoginController::class, 'cadastrar_historico'])->name('auth.cadastrar');
 Route::delete('/login/solicitados/solicitados/{id}',[LoginController::class, 'deletar_historico'])->name('historico.deletar');

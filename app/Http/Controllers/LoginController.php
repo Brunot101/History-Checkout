@@ -196,5 +196,25 @@ class LoginController extends Controller
     }
 
     }
+
+
+    public function upload_historico($id, Request $request){
+        $historico = Historico::findOrFail($id);
+
+       
+        
+        if($request->hasFile('pdf') && $request->isValid()){
+            $requestPdf = $request->pdf;
+            $extension =   $requestPdf->extension();
+            $pdfName = md5($requestPdf->pdf->getClientOriginalName() . strtotime("now") . ".". $extension);
+
+            $requestPdf->move(public_path('/pdfs'));
+            $historico->save();
+        }
+        
+
+
+        return redirect('/login/solicitados');
+    }
     
 }
