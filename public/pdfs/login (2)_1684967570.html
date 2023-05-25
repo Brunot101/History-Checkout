@@ -1,0 +1,276 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <title>gov.br - Acesse sua conta</title>
+  <meta property="creator.productor" content="http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/2981">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+  <link rel="icon" href="/assets/govbr/img/favicon.ico" type="image/x-icon">
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="/assets/govbr/fontawesome/css/all.min.css">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="/assets/govbr/fonts/rawline/rawline.css">
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="/assets/govbr/css/govbr-highcontrast.css">
+  <link rel="stylesheet" href="/assets/govbr/css/govbr-templates.css?v=4">
+  <link rel="stylesheet" href="/assets/govbr/css/govbr-modal.css?v=4">
+  <link rel="stylesheet" href="/assets/govbr/css/govbr-eula.css?v=4">
+  <!-- Scripts -->
+  <script src="/assets/govbr/js/contrast.class.js"></script>
+  <script src="/assets/govbr/js/modal.js"></script>
+</head>
+
+<body>
+    <a tabindex="0" href="#conteudo" class="sr-only sr-only-focusable" aria-label="Pular para o conteÃºdo principal. Navegue sempre com a tecla TAB">Pular para o conteÃºdo principal</a>
+
+    <header>
+        <a href="https://www.gov.br"><img src="/assets/govbr/img/govbr.png" alt="Logomarca GovBR" /></a>
+        <div id="acessibilidade">
+            <span>
+                <a href="#" onClick="contrastScript().toggleContrast(event)"><i class="fas fa-adjust"></i><span>Alto Contraste</span></a>
+            </span>
+            <span>
+                <a href="//www.vlibras.gov.br" target="_BLANK"><i class="fas fa-deaf"></i><span>VLibras</span></a>
+            </span>
+        </div>
+        
+    </header>
+<div class="container">
+	<aside id="aside-signin">
+		<img id="identidade-govbr" src="assets/govbr/img/conta_govbr_v2.jpg" alt="Logomarca GovBR" />
+	</aside>
+	<main id="main-signin">
+	<form method="post" id="loginData" autocomplete="off" novalidate>
+		<div class="card" id="login-cpf">
+			<input type="hidden" name="_csrf" value="2553a156-b10a-4413-9d9a-e18aabae1c95" />
+			<h3>Identifique-se no gov.br com:</h3>
+			<div class="item-login-signup-ways" onclick="accordion('accordion-panel-id')">
+				<img src="assets/govbr/img/icons/id-card-solid.png">
+				<a tabindex="3">Número do CPF</a>
+			</div>
+			<div class="accordion-panel" id="accordion-panel-id">
+				<p>Digite seu CPF para <strong>criar</strong> ou <strong>acessar</strong> sua conta gov.br</p>
+				<label for="cpf">CPF</label>
+				<input id="accountId" name="accountId" autocomplete="new-password" tabindex="1" type="tel" value="" placeholder="Digite seu CPF" aria-invalid="false">
+				<div class="button-panel" id="login-button-panel">
+					<button name="action" value="enterAccountId" class="button-continuar" type="submit" tabindex="2">Continuar</button>
+				</div>
+			</div>
+			<label id="title-outras-op">Outras opções de identificação:</label>
+			<hr id="hr-outras-op" style="margin: 0 0 0">
+
+			<div class="item-login-signup-ways">
+				<img src="assets/govbr/img/icons/InternetBanking-green.png" onclick="showModal('modal-bancos-credenciados')" />
+				<!-- Para voltar a cor normal, basta apagar o style do link e remover o 'green' do nome da imagem acima. -->
+				<a tabindex="5" href="#" onclick="showModal('modal-bancos-credenciados')" style="color:#008C32">Login com seu banco
+					<span style="font-size: 7px; background-color: #008C32; color: white; padding: 3px; top: -3px; position: relative; margin-left: 8px;">SUA   CONTA   SERÁ   PRATA</span>
+				</a>
+			</div>
+
+			<div class="item-login-signup-ways" onclick="showQrCode('2553a156-b10a-4413-9d9a-e18aabae1c95');">
+				    <img src="assets/govbr/img/icons/qrcode.png" />
+						<a tabindex="5" href="#">
+							Login com QR code
+							<!--img src="assets/govbr/img/icons/novo.svg" style="margin-left: 1ex"-->
+						</a>
+				    </div>
+			<div class="item-login-signup-ways" id="cert-digital">
+					<img src="assets/govbr/img/icons/CD.png" onclick="callLink(event, 'https://certificado.sso.acesso.gov.br/login?client_id=enem.inep.gov.br%2Fparticipante&authorization_id=187fdd55b21')" />
+					<a tabindex="4" href="https://certificado.sso.acesso.gov.br/login?client_id=enem.inep.gov.br%2Fparticipante&authorization_id=187fdd55b21">Seu certificado digital</a>
+				</div>
+			<div class="item-login-signup-ways" id="cert-digital-cloud">
+				<img src="assets/govbr/img/icons/CD-Nuvem.png" id="cert-digital-cloud-img" onclick="showModal('modal-certificado-nuvem')" />
+				<a tabindex="5" href="#" id="cert-digital-cloud-a" onclick="showModal('modal-certificado-nuvem')">Seu certificado digital em nuvem</a>
+			</div>
+			<div class="entenda-id-govbr" id="entenda-id-govbr">
+				<span>
+					<i class="fa fa-info-circle" aria-hidden="true"></i><a tabindex="6" href="https://www.gov.br/governodigital/pt-br/conta-gov-br/conta-gov-br/" id="entenda-id-govbr-a">Entenda a conta gov.br</a>
+					<a tabindex="6" href="https://cadastro.acesso.gov.br/termo-de-uso" style="display: block;" target="_blank" id="termo-de-uso">Termo de Uso e Aviso de Privacidade</a>
+				</span>
+			</div>
+		</div>
+	</form>
+	</main>
+</div>
+<!-- /////////////////////////// MODAL DO ACESSO COM CERTIFICADO EM NUVEM \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+<div class="modal-certificado-nuvem">
+	<div class="modal-content">
+		<h3>Provedores de Certificados em Nuvem</h3>
+		<div class="item-login-signup-ways">
+				<img src="https://sso.acesso.gov.br/assets/govbr/img/icons/neoid_logo.png" onclick="callLink(event, 'https://sso.acesso.gov.br/external-authentication/neoid'" />
+				<a tabindex="3" href="https://sso.acesso.gov.br/external-authentication/neoid">
+					NeoID</a>
+			</div>
+		<div class="item-login-signup-ways">
+				<img src="https://sso.acesso.gov.br/assets/govbr/img/icons/safeid_logo.png" onclick="callLink(event, 'https://sso.acesso.gov.br/external-authentication/safeid'" />
+				<a tabindex="3" href="https://sso.acesso.gov.br/external-authentication/safeid">
+					SafeID</a>
+			</div>
+		<div class="item-login-signup-ways">
+				<img src="https://sso.acesso.gov.br/assets/govbr/img/icons/birdid_logo.png" onclick="callLink(event, 'https://sso.acesso.gov.br/external-authentication/birdid'" />
+				<a tabindex="3" href="https://sso.acesso.gov.br/external-authentication/birdid">
+					BirdID</a>
+			</div>
+		<div class="item-login-signup-ways">
+				<img src="https://sso.acesso.gov.br/assets/govbr/img/icons/remoteid_logo.png" onclick="callLink(event, 'https://sso.acesso.gov.br/external-authentication/remoteid'" />
+				<a tabindex="3" href="https://sso.acesso.gov.br/external-authentication/remoteid">
+					RemoteID</a>
+			</div>
+		<div class="item-login-signup-ways">
+				<img src="https://sso.acesso.gov.br/assets/govbr/img/icons/vidaas_logo.png" onclick="callLink(event, 'https://sso.acesso.gov.br/external-authentication/vidaas'" />
+				<a tabindex="3" href="https://sso.acesso.gov.br/external-authentication/vidaas">
+					Vidaas</a>
+			</div>
+		<div class="item-login-signup-ways">
+				<img src="https://sso.acesso.gov.br/assets/govbr/img/icons/serasa_logo.png" onclick="callLink(event, 'https://sso.acesso.gov.br/external-authentication/serasa'" />
+				<a tabindex="3" href="https://sso.acesso.gov.br/external-authentication/serasa">
+					Serasa Experian</a>
+			</div>
+		<hr>
+		<div class="button-panel" id="modal-bancos-credenciados-button-panel">
+			<button class="button-cancel" type="button" id="btn-close-modal-certificado-nuvem" onclick="closeModal('modal-certificado-nuvem')">Cancelar</button>
+		</div>
+	</div>
+</div>
+<!-- /////////////////////////// MODAL DO ACESSO COM BANCOS CREDENCIADOS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+<div class="modal-bancos-credenciados">
+	<div class="modal-content">
+		<h3>Bancos Credenciados</h3>
+		<p><b>Crie</b> ou <b>aumente o nível</b> da sua conta para <b>PRATA</b>, fazendo login com seu banco.</p>
+		<div class="item-login-signup-ways">
+				<img src="https://sso.acesso.gov.br/assets/govbr/img/icons/bb_logo.png" onclick="callLink(event, 'https://sso.acesso.gov.br/external-authentication/banco-do-brasil'" />
+				<a tabindex="3" href="https://sso.acesso.gov.br/external-authentication/banco-do-brasil">
+					Banco do Brasil</a>
+			</div>
+		<div class="item-login-signup-ways">
+				<img src="https://sso.acesso.gov.br/assets/govbr/img/icons/banrisul_logo.png" onclick="callLink(event, 'https://sso.acesso.gov.br/external-authentication/banrisul'" />
+				<a tabindex="3" href="https://sso.acesso.gov.br/external-authentication/banrisul">
+					Banrisul</a>
+			</div>
+		<div class="item-login-signup-ways">
+				<img src="https://sso.acesso.gov.br/assets/govbr/img/icons/bradesco_logo.png" onclick="callLink(event, 'https://sso.acesso.gov.br/external-authentication/bradesco'" />
+				<a tabindex="3" href="https://sso.acesso.gov.br/external-authentication/bradesco">
+					Bradesco</a>
+			</div>
+		<div class="item-login-signup-ways">
+				<img src="https://sso.acesso.gov.br/assets/govbr/img/icons/brb_logo.png" onclick="callLink(event, 'https://sso.acesso.gov.br/external-authentication/banco-de-brasilia'" />
+				<a tabindex="3" href="https://sso.acesso.gov.br/external-authentication/banco-de-brasilia">
+					Banco de Brasília</a>
+			</div>
+		<div class="item-login-signup-ways">
+				<img src="https://sso.acesso.gov.br/assets/govbr/img/icons/cef_logo.png" onclick="callLink(event, 'https://sso.acesso.gov.br/external-authentication/caixa-economica'" />
+				<a tabindex="3" href="https://sso.acesso.gov.br/external-authentication/caixa-economica">
+					Caixa Econômica</a>
+			</div>
+		<div class="item-login-signup-ways">
+				<img src="https://sso.acesso.gov.br/assets/govbr/img/icons/sicoob_logo.png" onclick="callLink(event, 'https://sso.acesso.gov.br/external-authentication/sicoob'" />
+				<a tabindex="3" href="https://sso.acesso.gov.br/external-authentication/sicoob">
+					Sicoob</a>
+			</div>
+		<div class="item-login-signup-ways">
+				<img src="https://sso.acesso.gov.br/assets/govbr/img/icons/santander_logo.png" onclick="callLink(event, 'https://sso.acesso.gov.br/external-authentication/santander'" />
+				<a tabindex="3" href="https://sso.acesso.gov.br/external-authentication/santander">
+					Santander</a>
+			</div>
+		<div class="item-login-signup-ways">
+				<img src="https://sso.acesso.gov.br/assets/govbr/img/icons/itau_logo.png" onclick="callLink(event, 'https://sso.acesso.gov.br/external-authentication/itau'" />
+				<a tabindex="3" href="https://sso.acesso.gov.br/external-authentication/itau">
+					Itaú</a>
+			</div>
+		<div class="item-login-signup-ways">
+				<img src="https://sso.acesso.gov.br/assets/govbr/img/icons/agibank_logo.png" onclick="callLink(event, 'https://sso.acesso.gov.br/external-authentication/agibank'" />
+				<a tabindex="3" href="https://sso.acesso.gov.br/external-authentication/agibank">
+					Agibank</a>
+			</div>
+		<div class="item-login-signup-ways">
+				<img src="https://sso.acesso.gov.br/assets/govbr/img/icons/sicredi_logo.png" onclick="callLink(event, 'https://sso.acesso.gov.br/external-authentication/sicredi'" />
+				<a tabindex="3" href="https://sso.acesso.gov.br/external-authentication/sicredi">
+					Sicredi</a>
+			</div>
+		<div class="item-login-signup-ways">
+				<img src="https://sso.acesso.gov.br/assets/govbr/img/icons/mercantil_logo.png" onclick="callLink(event, 'https://sso.acesso.gov.br/external-authentication/mercantil'" />
+				<a tabindex="3" href="https://sso.acesso.gov.br/external-authentication/mercantil">
+					Mercantil do Brasil</a>
+			</div>
+		<hr>
+		<div class="button-panel" id="modal-bancos-credenciados-button-panel">
+			<button class="button-cancel" type="button" id="btn-close-modal-bancos-credenciados" onclick="closeModal('modal-bancos-credenciados')">Cancelar</button>
+		</div>
+	</div>
+</div>
+<!-- /////////////////////////// MODAL DO ACESSO COM QRCODE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+	<div class="modal-qrcode">
+		<div class="modal-content" style="text-align: center; justify-content: space-evenly">
+			<h3>Login sem senha com QR code</h3>
+				<p style="text-align: justify; justify-content: space-evenly">Utilize o <strong>aplicativo gov.br</strong> para logar sem senha, usando apenas o leitor de QR code.</p>
+				<div id="qrcode" style="display: inline-block"></div>
+				<p style="text-align: justify; justify-content: space-evenly">
+					Você pode baixar o aplicativo <strong>gov.br</strong> gratuitamente nas lojas de aplicativos.
+				</p>
+				<p style="text-align: center">
+					<a href="https://play.google.com/store/apps/details?id=br.gov.meugovbr">
+						<img src="assets/govbr/img/disponivel-no-google-play.png" alt="Android" style="width: 125px">
+					</a>
+					<a href="https://apps.apple.com/br/app/meu-gov-br/id1506827551">
+						<img src="assets/govbr/img/disponivel-na-apple-store.png" alt="iOS" style="width: 125px">
+					</a>
+				</p>
+				<div class="button-panel">
+					<button class="button-cancel" type="button" id="btn-close-modal-qrcode" onclick="stopQrCode()">Cancelar</button>
+				</div>
+			<form id="formLoginQrCode" method="post" style="display: none">
+        		<input type="hidden" name="action" value="qrcode-login" />
+				<input type="hidden" name="token" />
+				<input type="hidden" name="_csrf" value="2553a156-b10a-4413-9d9a-e18aabae1c95" />
+			</form>
+		</div>
+	</div>
+
+
+
+
+  <footer>
+  </footer>
+
+  <!-- Jquery -->
+  <script src="assets/vendors/jquery/jquery-2.2.4.min.js"></script>
+  <!-- JS Website -->
+  <script src="/assets/govbr/js/scripts.js"></script>
+  <script src="/assets/vendors/jquery/jquery.maskedinput.js"></script>
+</body>
+
+</html><script>
+	focusOnLoad('accountId');
+
+    (function () {
+        window.addEventListener("load", function () {
+            cpfMask("accountId");
+        });
+    })();
+
+    function accordion(elem) {
+        var panel = document.getElementById(elem)
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+			document.getElementById("title-outras-op").style = "display: block;";
+			document.getElementById("hr-outras-op").style = "display: block;"
+        } else {
+            panel.style.maxHeight = 0;
+			document.getElementById("title-outras-op").style = "display: none;";
+			document.getElementById("hr-outras-op").style = "display: none;"
+        }
+    }
+
+    setTimeout(function () { location.reload(true); }, 29 /* minutes */ * 60 /* seconds */ * 1000 /* millis */);
+</script>
+<script src="/assets/vendors/qrcode/qrcode.min.js"></script>
+<script>
+startQrCode();
+</script>

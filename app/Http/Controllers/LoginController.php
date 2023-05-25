@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Exception;
+use Storage;
 
 class LoginController extends Controller
 {
@@ -200,21 +201,44 @@ class LoginController extends Controller
 
     public function upload_historico($id, Request $request){
         $historico = Historico::findOrFail($id);
-
-       
         
-        if($request->hasFile('pdf') && $request->isValid()){
+       
+        $file = $request->pdf;
+        
+        
+        if($file){
+            
             $requestPdf = $request->pdf;
-            $extension =   $requestPdf->extension();
-            $pdfName = md5($requestPdf->pdf->getClientOriginalName() . strtotime("now") . ".". $extension);
-
-            $requestPdf->move(public_path('/pdfs'));
+            $extension =   $request->pdf->extension();
+            $pdfWithExtension = $request->file('pdf')->getClientOriginalName();
+            $pdfName = pathinfo($pdfWithExtension, PATHINFO_FILENAME);
+            $pdfToStore = $pdfName.'_'.time().'.'.$extension;
+            $publicPath = public_path('/pdfs');
+            
+            // $requestPdf->move(public_path('/pdfs'));
+            $request->file('pdf')->move($publicPath , $pdfToStore);
+            $historico->pdf = $pdfToStore;
             $historico->save();
         }
         
 
 
         return redirect('/login/solicitados');
+    }
+
+
+    public function download_pdf($id, Request $request){
+
+        echo("aqui");
+        $historico = Historico::findOrFail($id);
+        
+       
+        $file = $request->pdf;
+
+        
+        return response()->download("pdfs/$historico->pdf");
+        
+
     }
     
 }

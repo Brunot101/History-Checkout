@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('historicos', function (Blueprint $table) {
-            $table->string('pdf')->nullabe();
+            $table->string('pdf')->nullable();
         });
     }
 

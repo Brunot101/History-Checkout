@@ -378,23 +378,55 @@ span.round-tab{
     line-height: 0;
 }
 
-#formFile{
+#formsFile{
+
+    
+    display: none;
     border: none;
     background-color:#337ab7;
     border-color:#2e6da4;
     color:white;
-    width: 300px;
+    
     outline:unset;
 }
 
 
-#pdfForm{
-    position: relative;
-    display: flex;
+
+#formId{
+    text-align: center;
     
     
+    color:white;
+    
+    background-color: #337ab7;
 }
 #pdfButton{
     position: relative;
     left: 10px;
 }
+#uploadDiv{
+    
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+}
+
+
+input[type="file"]{
+    display: none !important;
+    border: none !important;
+    background-color:#337ab7;
+    border-color:#2e6da4;
+    color:white;
+    
+    outline:unset !important;
+}
+
+.download{
+    position: relative;
+    left: 20px ;
+    color: black !important;
+    height: 40px !important;
+   
+}
+
