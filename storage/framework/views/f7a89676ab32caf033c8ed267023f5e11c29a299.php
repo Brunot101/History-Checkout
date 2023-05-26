@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 <body>
-    
     <div class="grid-container">
+        <div id = "blank"></div>
         
-        <div id="topo" font-color>
-            <h1 >History Checkout</h1>
+        <div id="topo" font-color >
+            <h1>Floriano Peixoto</h1>
+            
+            
         </div>
         
         
@@ -26,6 +28,8 @@
         </div>
         <div id="conteudo">
             <?php echo $__env->yieldContent('conteudo'); ?>
+            
+            
         </div>
         
         <div id="footer">

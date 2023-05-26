@@ -3,6 +3,7 @@
     display: grid;
     
     grid-template-areas: 
+        'blank blank blank blank blank blank'
         'topo topo topo topo topo topo'
         'topo2 topo2 topo2 topo2 topo2 topo2'
         'menu conteudo conteudo conteudo conteudo conteudo'
@@ -17,38 +18,75 @@
    
 }
 
+#blank{
+    grid-area: blank;
+    background: #f5f6f6;
+    padding: 10px;
+    
+    height: 30px;
+}
+
 
 #topo{
+    border-radius: 20px;
     text-align: center;
     grid-area: topo;
     padding: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
     background-color: rgb(12, 12, 210);
-    color: rgb(255, 255, 255);
-    
-    
-    
+    color:  rgb(250, 250, 250);
+    font-family:'Times New Roman', Times, serif;
+    box-shadow: 0px 5px 5px 5px rgb(189, 188, 188);
+    /* text-shadow: 
+               -1px -1px 0px rgb(247, 247, 247),
+               -1px 1px 0px rgb(251, 251, 251),               
+                1px -1px 0px rgb(253, 252, 252),                
+                1px 0px 0px rgb(255, 255, 255); */
+                
+
     
 }
+@keyframes flicksGreen {
+    from{
+        filter:drop-shadow(0 0 rgb(8, 224, 8))  ;
+    }
+
+    to{
+        filter:drop-shadow(0 0 30px rgb(8, 224, 8))  ;
+    }
+  }
+    
+    
+    
+    
+    
+
 #topo2{
     
     grid-area: topo2;
     padding: 10px;
-    
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
     background-color: rgb(255, 0, 0);
-    box-shadow: 5px 5px 5px 5px rgb(189, 188, 188);
+    box-shadow: 0px 5px 5px 5px rgb(189, 188, 188);
+    
+    
     
     
 
     
 }
 #menu{
-    padding-top: 20px;
+    padding-top: 20px;  
     width: 230px;
-    height: 130vh;
+    height: 130vh;  
     padding: 5rem, 1rem;
     text-align:left;
     grid-area: menu;
     background-color: rgb(12, 12, 210);
+    
     margin-top: 15px;
    
     
@@ -71,7 +109,8 @@
 
 .loginIcons input{
     padding-left: 30px;
-    border-radius: 5px;
+    
+    color: white !important;
    
     
    
@@ -80,6 +119,7 @@
 .loginIcons i{
     position:absolute;
     left: 15px;
+    color: white;
     
     
    
@@ -146,14 +186,30 @@
     
 }
 
-
-#email,#password, #submitlogin{
+.loginIcons input::placeholder{
+    color: white;
+}
+#email,#password{
     position: relative;
     left: 10px;
-    border-radius: 10px;
-    outline: unset;
-    border: 1px solid rgb(10, 10, 10);
+    border: none;
+    /* border-radius: 10px; */
+    outline: none;
+    background-color: transparent;
+    color: white;
+    border-bottom: 1.5px solid rgb(255, 255, 255);
 }
+
+#submitlogin{
+    position: relative;
+    left: 10px;
+    color: white;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1.5px solid rgb(255, 255, 255);
+
+}
+
 #submitlogin{
     width: 100px;
 }
@@ -216,6 +272,8 @@ h1{
 
    
 }
+
+
 a:hover{
     background-color: #1790ed !important;
     transition: 0.5s;
@@ -276,10 +334,16 @@ a:hover{
     
     border-width: 1px; 
     margin: 0 auto 4px;
+
+
     
 }
-/* .progresso .etapas .pasta-encontrada{
-    background-color: rgb(8, 224, 8);
+/* .historico-em-confecção .round-tab{
+    animation: flicksGreen 2s alternate infinite ease-in-out;
+
+} */
+ /* .progresso .etapas .pasta-encontrada{
+    
 }
 .progresso .etapas .solicitado{
     background-color: rgb(8, 224, 8);
@@ -287,7 +351,7 @@ a:hover{
 
 .progresso .etapas .pendencias-verificadas{
     background-color: red;
-} */
+}  */
 
 #botao-cadastrar{
     position: relative;

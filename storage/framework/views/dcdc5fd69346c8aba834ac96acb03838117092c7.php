@@ -22,12 +22,12 @@
     <form action = "/login" method = "post">
     <?php echo csrf_field(); ?>
     
-    <input  type="email" name="email" placeholder= "Email" id="email">
+    <input  type="email" name="email" placeholder= "Email" id="email" autocomplete = "off">
     <i class="bi bi-person-fill"></i>         
     <br>
     <br>
     
-    <input type="password" name="password"  placeholder="Senha" id="password">
+    <input type="password" name="password"  placeholder="Senha" id="password"  autocomplete = "off">
     <i class="bi bi-lock-fill"></i>
     <br>
     <br>
