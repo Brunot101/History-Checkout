@@ -6,6 +6,8 @@
                 
     <nav class="navbar" id="nav" role="navigation">
         <ul class="nav sidebar-nav">
+            
+            
             <li>
                 <a href = "/login/perfil">Perfil
                 <i class="bi bi-person"></i>
@@ -136,5 +138,5 @@
     
       
 
-</html>
+
 <?php echo $__env->make('layouts.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Betânia\History-Checkout\resources\views/auth/cadastrar.blade.php ENDPATH**/ ?>

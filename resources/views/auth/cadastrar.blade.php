@@ -6,6 +6,8 @@
                 
     <nav class="navbar" id="nav" role="navigation">
         <ul class="nav sidebar-nav">
+            
+            
             <li>
                 <a href = "/login/perfil">Perfil
                 <i class="bi bi-person"></i>
@@ -136,4 +138,3 @@
     
       
 
-</html>
