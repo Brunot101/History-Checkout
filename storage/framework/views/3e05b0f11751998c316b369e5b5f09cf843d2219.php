@@ -4,28 +4,41 @@
   
   
           
-            <div class="loginIcons">
+<div class="loginIcons">
                 
-                <nav class="navbar" id="nav" role="navigation">
-                    <ul class="nav sidebar-nav">
-                        
-                        <li>
-                            <a href="/login/perfil">Perfil</a>
-                        </li>
-                        <li>
-                            <a href="/login/cadastrar">Cadastrar Histórico</a>
-                        </li>
-                        <li>
-                            <a href="/login/solicitados">Históricos Solicitados</a>
-                        </li>
-                        <li>
-                          <a href="/login">Verificar Histórico</a>
-                        </li>
-                        <li>
-                          <a href="/logout">Sair</a>
-                        </li>
-                            
-                </div>
+    <nav class="navbar" id="nav" role="navigation">
+        <ul class="nav sidebar-nav">
+            
+            
+            <li>
+                <a href = "/login/perfil">Perfil
+                <i class="bi bi-person"></i>
+                </a>
+            </li>
+            <li>
+                <a href="/login/cadastrar">Cadastrar Histórico
+                <i class="bi bi-folder-plus"></i>
+                </a>
+            </li>
+            <li>
+                <a href="/login/solicitados">Históricos Solicitados
+                <i class="bi bi-file-earmark-check" ></i>
+                </a>
+            </li>
+            <li>
+                
+                <a href="/login">Verificar Histórico
+                <i class="bi bi-search"></i>
+                </a>
+                
+            </li>
+            <li>
+                <a href="/logout">Sair
+                <i class="bi bi-box-arrow-left"></i>
+                </a>
+            </li>
+                
+    </div>
             
         
 <?php $__env->stopSection(); ?>

@@ -10,19 +10,31 @@
             
             
             <li>
-                <a href = "login/perfil">Perfil</a>
+                <a href = "/login/perfil">Perfil
+                <i class="bi bi-person"></i>
+                </a>
             </li>
             <li>
-                <a href="/login/cadastrar">Cadastrar Histórico</a>
+                <a href="/login/cadastrar">Cadastrar Histórico
+                <i class="bi bi-folder-plus"></i>
+                </a>
             </li>
             <li>
-                <a href="/login/solicitados">Históricos Solicitados</a>
+                <a href="/login/solicitados">Históricos Solicitados
+                <i class="bi bi-file-earmark-check" ></i>
+                </a>
             </li>
             <li>
-                <a href="/login">Verificar Histórico</a>
+                
+                <a href="/login">Verificar Histórico
+                <i class="bi bi-search"></i>
+                </a>
+                
             </li>
             <li>
-                <a href="/logout">Sair</a>
+                <a href="/logout">Sair
+                <i class="bi bi-box-arrow-left"></i>
+                </a>
             </li>
                 
     </div>
