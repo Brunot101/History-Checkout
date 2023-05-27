@@ -169,6 +169,7 @@
     width:191px;
     outline: unset
 }
+
 #searchButton{
     border:none;
     float:left;
@@ -426,7 +427,7 @@ span.round-tab{
     vertical-align: middle;
     top:100px;
     width: 150px;
-    height: 50px;
+    height: 34px;
     border-radius: 5px;
     background-color: #05a2e5;
 
@@ -436,7 +437,7 @@ span.round-tab{
     position:inherit;
     
     right: 105px;
-    bottom: 49px;
+    bottom: 34px;
     
     width: 0;
     border-bottom: 8px solid #05a2e5;
