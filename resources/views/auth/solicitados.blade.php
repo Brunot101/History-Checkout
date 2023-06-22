@@ -94,14 +94,20 @@
                     <td>{{$historico->pai}}</td>
                     <td>{{$historico->status}}</td>
                     <td><!-- Button trigger modal -->
-                      <form >
-                       
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-{{$historico->id}}"  >
-                          <i class="bi bi-pencil"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#delete-{{$historico->id}}"  >
-                          <i class="bi bi-x-square"></i>
-                        </button>
+                      <form id = "viewDelete" >
+
+                        
+
+                          <button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#edit-{{$historico->id}}"  >
+                            <i class="bi bi-pencil"></i>
+                          </button>
+                        
+                        
+
+                          <button type="button" id = "deleteeButton" class="btn btn-primary" data-toggle="modal" data-target="#delete-{{$historico->id}}"  >
+                            <i class="bi bi-x-square"></i>
+                          </button>
+                        
 
                       </form>
                       @include('auth.edit')
@@ -111,15 +117,16 @@
                     <td>
                     
                     <!-- Botão de salvar o PDF e download -->
-                    <form action="{{route('upload_historico',$historico->id)}}" method = "POST" enctype="multipart/form-data" >
+                    <form  action="{{route('upload_historico',$historico->id)}}" method = "POST" enctype="multipart/form-data" >
                         @csrf
                         <input class="form-control" type="file" id="{{$historico->id}}" name="pdf">
                         <div id="pdfForm">
                           <label id="formId" for="{{$historico->id}}">
                             <div id = "uploadDiv">
+                            <button type="button"  class="btn btn-primary">
                               <i class="bi bi-file-earmark-arrow-up" id = "uploadIcon"></i>
-
-                            </div>
+                            </button>
+                          </div>
                           </label>
                         
                           <button id="pdfButton" class = "btn btn-primary">Salvar</button>

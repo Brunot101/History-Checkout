@@ -94,14 +94,20 @@
                     <td><?php echo e($historico->pai); ?></td>
                     <td><?php echo e($historico->status); ?></td>
                     <td><!-- Button trigger modal -->
-                      <form >
-                       
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-<?php echo e($historico->id); ?>"  >
-                          <i class="bi bi-pencil"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#delete-<?php echo e($historico->id); ?>"  >
-                          <i class="bi bi-x-square"></i>
-                        </button>
+                      <form id = "viewDelete" >
+
+                        
+
+                          <button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#edit-<?php echo e($historico->id); ?>"  >
+                            <i class="bi bi-pencil"></i>
+                          </button>
+                        
+                        
+
+                          <button type="button" id = "deleteeButton" class="btn btn-primary" data-toggle="modal" data-target="#delete-<?php echo e($historico->id); ?>"  >
+                            <i class="bi bi-x-square"></i>
+                          </button>
+                        
 
                       </form>
                       <?php echo $__env->make('auth.edit', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
@@ -111,15 +117,16 @@
                     <td>
                     
                     <!-- Botão de salvar o PDF e download -->
-                    <form action="<?php echo e(route('upload_historico',$historico->id)); ?>" method = "POST" enctype="multipart/form-data" >
+                    <form  action="<?php echo e(route('upload_historico',$historico->id)); ?>" method = "POST" enctype="multipart/form-data" >
                         <?php echo csrf_field(); ?>
                         <input class="form-control" type="file" id="<?php echo e($historico->id); ?>" name="pdf">
                         <div id="pdfForm">
                           <label id="formId" for="<?php echo e($historico->id); ?>">
                             <div id = "uploadDiv">
+                            <button type="button"  class="btn btn-primary">
                               <i class="bi bi-file-earmark-arrow-up" id = "uploadIcon"></i>
-
-                            </div>
+                            </button>
+                          </div>
                           </label>
                         
                           <button id="pdfButton" class = "btn btn-primary">Salvar</button>

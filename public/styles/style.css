@@ -472,7 +472,7 @@ span.round-tab{
 }
 #pdfButton{
     position: relative;
-    left: 10px;
+    left: 20px;
 }
 #uploadDiv{
     
@@ -499,4 +499,22 @@ input[type="file"]{
     height: 40px !important;
    
 }
+#viewDelete{
+    display: flex;
+}
+
+#deleteeButton{
+    position: relative;
+    left: 5px;
+    background-color: #e63946 !important;
+    
+}
+#pdfForm{
+    display: flex;
+}
+
+.btn{
+    padding: 7px 14px !important
+}
+
 
