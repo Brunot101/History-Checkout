@@ -123,13 +123,13 @@
                         <div id="pdfForm">
                           <label id="formId" for="{{$historico->id}}">
                             <div id = "uploadDiv">
-                            <button type="button"  class="btn btn-primary">
+                            
                               <i class="bi bi-file-earmark-arrow-up" id = "uploadIcon"></i>
-                            </button>
+                            
                           </div>
                           </label>
                         
-                          <button id="pdfButton" class = "btn btn-primary">Salvar</button>
+                          <button  id="pdfButton" class = "btn btn-primary">Salvar</button>
                           
                         </div>
                         

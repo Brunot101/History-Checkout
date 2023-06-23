@@ -516,5 +516,11 @@ input[type="file"]{
 .btn{
     padding: 7px 14px !important
 }
+#uploadIcon{
+    display: inherit;
+    height: 20px !important;
+}
+
+
 
 
