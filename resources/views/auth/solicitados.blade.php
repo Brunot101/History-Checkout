@@ -85,7 +85,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach($historicos as $historico)
+                  @foreach($historicos->slice(0,5) as $historico)
                   <tr>
                     <th scope="row"></th>
                     
