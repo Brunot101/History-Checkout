@@ -22,13 +22,15 @@ Route::get('/', [EventController::class,'index']) ->name('home');
 
 
 
-Route::post('/login',[LoginController::class,'auth']);
+Route::post('/login',[LoginController::class,'auth']) ->name('auth');
+
 
 
 
 
 Route::get('/cadastrar',[LoginController::class, 'cadastrar1']);
 Route::post('/status',[LoginController::class, 'status'])->name('status');
+
 Route::post('/solicitados',[LoginController::class, 'queryHistory'])->name('queryHistory');
 
 

@@ -29,6 +29,7 @@ class LoginController extends Controller
         }
         else{
             return redirect()->back()->with('invalido','Login invalido');
+            
         }
     }
 

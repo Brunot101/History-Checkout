@@ -421,7 +421,7 @@ span.round-tab{
 .legenda{
     color: white;
     display: table-cell;
-    
+    padding: 5px;
     text-align: center;
     position: absolute;
     vertical-align: middle;
@@ -430,7 +430,13 @@ span.round-tab{
     height: 34px;
     border-radius: 5px;
     background-color: #05a2e5;
+    
 
+}
+.teste{
+    display: table-cell;
+    vertical-align: middle;
+    
 }
 
 .legenda::after{
@@ -493,11 +499,18 @@ input[type="file"]{
 }
 
 .download{
+    display: flex;
     position: relative;
     left: 20px ;
     color: black !important;
-    height: 40px !important;
+    height: 32px !important;
+    width: 26px;
+    border-radius: 4px;
    
+}
+.download:hover{
+    background-color: #e63946 !important;
+    transition: 0.5s;
 }
 #viewDelete{
     display: flex;

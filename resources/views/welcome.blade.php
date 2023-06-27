@@ -18,7 +18,7 @@
         {{session('invalido')}}
     </div>
     @endif
-    <form action = "/login" method = "post">
+    <form action = "{{route('auth')}}" method = "POST">
     @csrf
     
     <input  type="email" name="email" placeholder= "Email" id="email" autocomplete = "off">

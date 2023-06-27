@@ -26,7 +26,7 @@
                         <span class="round-tab" id= "Pendencias verificadas" {{$historico->status == 'Pendencias verificadas' ? 'style=background-color:rgb(8,224,8);' : ''}}>
                             <i class="bi bi-search"></i>
                         </span>
-                        <div class="legenda" {{$historico->status != 'Pendencias verificadas' ? 'style=display:none;' : ''}}>Pendências verificadas</div>
+                        <div class="legenda" {{$historico->status != 'Pendencias verificadas' ? 'style=display:none;' : ''}}>Pendências ok</div>
                     </li>
                     <li class="historico-em-confecção" data-toggle="tab" >
                         <span class="round-tab" id= "Em confeccao" {{$historico->status == 'Em confeccao' ? 'style=background-color:rgb(8,224,8);' : ''}}>
@@ -44,7 +44,10 @@
                         <span class="round-tab" id= "Historico entregue" {{$historico->status == 'Historico entregue' ? 'style=background-color:rgb(8,224,8);' : ''}}>
                             <i class="bi bi-envelope"></i>
                         </span>
+                        
+
                         <div class="legenda" {{$historico->status != 'Historico entregue' ? 'style=display:none;' : ''}}>Histórico entregue</div>
+                        
                     </li>
                     
                     

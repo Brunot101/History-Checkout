@@ -28,7 +28,7 @@
                         <span class="round-tab" id= "Pendencias verificadas" <?php echo e($historico->status == 'Pendencias verificadas' ? 'style=background-color:rgb(8,224,8);' : ''); ?>>
                             <i class="bi bi-search"></i>
                         </span>
-                        <div class="legenda" <?php echo e($historico->status != 'Pendencias verificadas' ? 'style=display:none;' : ''); ?>>Pendências verificadas</div>
+                        <div class="legenda" <?php echo e($historico->status != 'Pendencias verificadas' ? 'style=display:none;' : ''); ?>>Pendências ok</div>
                     </li>
                     <li class="historico-em-confecção" data-toggle="tab" >
                         <span class="round-tab" id= "Em confeccao" <?php echo e($historico->status == 'Em confeccao' ? 'style=background-color:rgb(8,224,8);' : ''); ?>>
@@ -117,4 +117,4 @@
     
     
 
-<?php echo $__env->make('welcome', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Betânia\History-Checkout\resources\views/status.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Betânia\History-Checkout\resources\views/status.blade.php ENDPATH**/ ?>

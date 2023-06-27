@@ -19,7 +19,7 @@
 
     </div>
     <?php endif; ?>
-    <form action = "/login" method = "post">
+    <form action = "<?php echo e(route('auth')); ?>" method = "POST">
     <?php echo csrf_field(); ?>
     
     <input  type="email" name="email" placeholder= "Email" id="email" autocomplete = "off">
